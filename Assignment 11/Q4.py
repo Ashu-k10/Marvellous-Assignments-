@@ -16,7 +16,7 @@ def main():
         print("Enter the number :")
         value = int(input())
 
-        ret = reverse(123)
+        ret = reverse(value)
 
         print("Reversed number of the following is: ",ret)
 
