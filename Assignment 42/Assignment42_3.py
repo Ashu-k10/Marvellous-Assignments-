@@ -1,21 +1,16 @@
 import math
 
 # Dataset
-# Study Hours, Attendance, Result
 data = [
-    (1, 50, "Fail"),
-    (2, 55, "Fail"),
     (2, 60, "Fail"),
-    (3, 65, "Pass"),
-    (4, 70, "Pass"),
-    (5, 75, "Pass"),
-    (6, 80, "Pass"),
-    (7, 85, "Pass")
+    (5, 80, "Pass"),
+    (6, 85, "Pass"),
+    (1, 50, "Fail")
 ]
 
 # Accept new student's data
-study_hours = float(input("Enter study hours: "))
-attendance = float(input("Enter attendance percentage: "))
+study_hours = float(input("Enter Study Hours: "))
+attendance = float(input("Enter Attendance: "))
 
 # K value
 K = 3
@@ -35,16 +30,28 @@ for hours, attend, result in data:
 # Sort distances
 distances.sort()
 
+# Display distances
+print("\nDistances:")
+
+for distance, result in distances:
+    print("Distance =", round(distance, 2), "Result =", result)
+
 # Select K nearest neighbours
 nearest = distances[:K]
 
-print("\nK Nearest Neighbours:")
+print("\nK = 3 Nearest Neighbours:")
 
 for distance, result in nearest:
     print("Distance =", round(distance, 2), "Result =", result)
 
+# Majority voting
+votes = {}
+
+for distance, result in nearest:
+    votes[result] = votes.get(result, 0) + 1
 
 # Predict result
 prediction = max(votes, key=votes.get)
 
+print("\nVotes:", votes)
 print("Predicted Result:", prediction)
