@@ -1,3 +1,5 @@
+# Develop a streamlit Application that accepts a Principal Amount . Rate of Interest and Time Period. Provide a Calculate button to calculate and display the simple interest
+
 import streamlit as st 
 
 st.title("Simple Marvellous Calculator")
