@@ -1,3 +1,5 @@
+# Develop a streamlit Application that accepts a students name and marks in three subjects. Calculate total marks , percentage and display whether the student has passed or failed. Consider 40 Marks out of 100 as the minimum passing marks in each subject
+
 import streamlit as st
 
 st.title("Marvellous Result Calculator")
