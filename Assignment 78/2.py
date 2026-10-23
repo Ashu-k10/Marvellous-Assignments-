@@ -1,3 +1,5 @@
+# Develop a streamlit Application that accepts an integers from the user. Provide a check button to determine whether the entered number is even or odd and display the result
+
 import streamlit as st
 
 st.title("Even or Odd Checker")
